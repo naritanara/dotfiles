@@ -1,0 +1,51 @@
+theme = "catppuccin_macchiato"
+
+[editor]
+auto-format = false
+bufferline = "multiple"
+color-modes = true
+line-number = "relative"
+rulers = [80]
+text-width = 80
+true-color = true
+
+[editor.auto-save.after-delay]
+enable = true
+timeout = 500
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "block"
+
+[editor.file-picker]
+git-exclude = false
+
+[editor.indent-guides]
+render = true
+
+[editor.lsp]
+display-inlay-hints = true
+display-messages = true
+
+[editor.statusline.mode]
+insert = "I"
+normal = "N"
+select = "S"
+
+[keys.normal]
+backspace = "search_prev"
+h = "move_char_left"
+k = "move_visual_line_down"
+l = "move_visual_line_up"
+n = "move_char_right"
+ret = "search_next"
+
+[keys.select]
+backspace = "search_prev"
+h = "extend_char_left"
+k = "extend_visual_line_down"
+l = "extend_visual_line_up"
+n = "extend_char_right"
+ret = "search_next"
+
