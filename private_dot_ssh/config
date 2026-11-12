@@ -1,0 +1,26 @@
+CanonicalDomains naritanara.xyz
+CanonicalizeHostname always
+
+Host frankenstein
+  ForwardAgent yes
+  HostName 192.168.42.10
+  ProxyJump tunnel
+
+Host *.naritanara.xyz frankenstein tunnel
+  CertificateFile ~/.ssh/id_ed25519-cert_naritanara.pub
+  ForwardAgent yes
+  IdentitiesOnly yes
+  IdentityFile ~/.ssh/id_ed25519
+  User nara
+
+Host *
+  AddKeysToAgent no
+  Compression no
+  ControlMaster auto
+  ControlPath ~/.ssh/master-%r@%n:%p
+  ControlPersist yes
+  ForwardAgent no
+  HashKnownHosts no
+  ServerAliveCountMax 3
+  ServerAliveInterval 0
+  UserKnownHostsFile ~/.ssh/known_hosts
