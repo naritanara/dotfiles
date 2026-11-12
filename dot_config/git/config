@@ -1,0 +1,95 @@
+[alias]
+	adog = "log --all --decorate --oneline --graph"
+	adogs = "adog --stat"
+
+[branch]
+	sort = "-committerdate"
+
+[color "blame"]
+	highlightRecent = "black bold,1 year ago,white,1 month ago,default,7 days ago,blue"
+
+[color "branch"]
+	current = "magenta"
+	local = "default"
+	plain = "blue"
+	remote = "yellow"
+	upstream = "green"
+
+[color "diff"]
+	context = "white"
+	frag = "magenta"
+	meta = "black bold"
+	whitespace = "yellow reverse"
+
+[core]
+	compression = 9
+
+[credential]
+	helper = "/usr/libexec/git-core/git-credential-libsecret"
+
+[delta]
+	dark = true
+	navigate = true
+
+[diff]
+	algorithm = "histogram"
+	colorMoved = "default"
+	submodule = "log"
+
+[fetch]
+	prune = true
+	prunetags = true
+
+[init]
+	defaultBranch = "main"
+
+[interactive]
+	diffFilter = "delta --color-only"
+
+[log]
+	abbrevCommit = true
+	date = "human"
+	format = "oneline"
+	graph = true
+	graphColors = "blue,yellow,cyan,magenta,green,red"
+
+[merge]
+	conflictStyle = "zdiff3"
+
+[pager]
+	blame = "delta"
+	diff = "delta"
+	log = "delta"
+	show = "delta"
+
+[push]
+	autoSetupRemote = true
+	followTags = true
+
+[rebase]
+	autosquash = true
+	autostash = true
+
+[rerere]
+	enabled = true
+
+[status]
+	branch = true
+	short = true
+	showStash = true
+	showUntrackedFiles = "all"
+	submoduleSummary = true
+
+[submodule]
+	fetchJobs = 12
+	recurse = true
+
+[tag]
+	sort = "-taggerdate"
+
+[user]
+	email = "nara.diaz.vinolas@gmail.com"
+	name = "Nara Diaz Viñolas"
+
+[include]
+	path = "config.d/bsc-gitlab"
